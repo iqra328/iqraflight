@@ -1,6 +1,7 @@
-/* MapHeader.css - CLEAN VERSION */
+/* MapHeader.css - RESPONSIVE VERSION */
 .Wapperh {
-  width: 1000px;
+  width: 100%;
+  max-width: 1000px; /* Changed from fixed width */
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
@@ -10,7 +11,8 @@
 .Baro {
   display: flex;
   gap: 10px;
-  height: 5vh;
+  height: auto; /* Changed from 5vh for better mobile */
+  min-height: 50px;
   align-items: center;
   width: 100%;
   margin-bottom: 15px;
@@ -20,6 +22,7 @@
 .search-input {
   flex: 1;
   min-width: 200px;
+  max-width: 100%;
   padding: 12px 15px;
   z-index: 1;
   border-radius: 10px;
@@ -32,9 +35,10 @@
 .categories-dropdown {
   position: relative;
   display: inline-block;
+  min-width: 180px;
 }
 
-.categories-dropdown select  {
+.categories-dropdown select {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -47,19 +51,20 @@
   font-weight: 600;
   font-size: 14px;
   white-space: nowrap;
-  min-width: 180px;
+  width: 100%; /* Changed to 100% */
+  min-width: 100%; /* Ensure it fills container */
   outline: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 80, 255, 0.3);
 }
 
-.btn{
+.btn {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: #0050ff;
   color: white;
-  padding: 12px 10px 12px 10px;
+  padding: 12px 15px; /* Adjusted padding for mobile */
   border-radius: 10px;
   border: none;
   cursor: pointer;
@@ -70,7 +75,6 @@
   outline: none;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 80, 255, 0.3);
-
 }
 
 .categories-dropdown option {
@@ -98,15 +102,10 @@
 .map {
   width: 70%;
   height: 100%;
+  min-height: 400px; /* Added min-height */
   object-fit: cover;
   border-radius: 12px 0 0 12px;
-  background: #e0e0e0; /* Fallback color if image doesn't load */
-}
-
-/* Add this if image doesn't show */
-.map::before {
-  content: "Map Loading...";
-  display: none;
+  background: #e0e0e0;
 }
 
 /* SIDEBAR */
@@ -161,11 +160,13 @@
   flex: 1;
   color: #333;
   font-size: 14px;
+  word-break: break-word; /* Added for long text */
 }
 
 .location-distance {
   color: #666;
   font-size: 12px;
+  white-space: nowrap; /* Prevent wrapping */
 }
 
 /* MAP CONTAINER */
@@ -176,33 +177,39 @@
   border-radius: 12px;
   display: flex;
   height: 500px;
+  min-height: 400px; /* Added min-height */
   border: 1px solid #e0e0e0;
 }
 
-/* MAP FIX - if image doesn't load */
-.map-fallback {
-  width: 70%;
-  background: linear-gradient(45deg, #f0f0f0, #e0e0e0);
-  border-radius: 12px 0 0 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  font-size: 16px;
+/* ENHANCED RESPONSIVE - KEEPING UI INTACT */
+@media (max-width: 1100px) {
+  .Wapperh {
+    padding: 20px 15px;
+  }
+  
+  .map-container {
+    height: 450px;
+  }
 }
 
-/* RESPONSIVE */
-@media (max-width: 1040px) {
-  .Wapperh {
-    width: 95%;
-    max-width: 1000px;
-    padding: 20px 15px;
+@media (max-width: 900px) {
+  .Baro {
+    flex-wrap: wrap; /* Allow wrapping on medium screens */
+    gap: 15px;
+  }
+  
+  .search-input {
+    min-width: 150px;
+  }
+  
+  .map-container {
+    height: 400px;
   }
 }
 
 @media (max-width: 768px) {
   .Wapperh {
-    width: 95%;
+    padding: 15px;
   }
   
   .map-container {
@@ -212,7 +219,8 @@
   
   .map {
     width: 100%;
-    height: 300px;
+    height: 350px;
+    min-height: 350px;
     border-radius: 12px 12px 0 0;
   }
   
@@ -221,51 +229,50 @@
     border-radius: 0 0 12px 12px;
     border-left: none;
     border-top: 1px solid rgba(0, 60, 255, 0.1);
-    padding: 15px;
+    padding: 20px;
   }
   
-  .Baro {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  
-  .search-input {
+  .categories-dropdown {
     min-width: 150px;
+  }
+}
+
+@media (max-width: 600px) {
+  .Baro {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-input,
+  .categories-dropdown,
+  .btn {
+    width: 100%;
+    min-width: 100%;
   }
   
   .categories-dropdown select {
-    min-width: 150px;
-    padding: 12px 35px 12px 15px;
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .map {
+    height: 300px;
+    min-height: 300px;
+  }
+  
+  .Right {
+    padding: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .Wapperh {
-    width: 100%;
-    padding: 15px 10px;
-  }
-  
-  .Baro {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-  
-  .search-input {
-    width: 100%;
-  }
-  
-  .categories-dropdown {
-    width: 100%;
-  }
-  
-  .categories-dropdown select {
-    width: 100%;
-    min-width: auto;
+    padding: 10px;
   }
   
   .map {
     height: 250px;
+    min-height: 250px;
   }
   
   .Right {
@@ -278,5 +285,10 @@
   
   .location-item {
     padding: 10px 12px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+  }
+  
+  .location-name {
+    min-width: 60%; /* Ensure text doesn't get too small */
   }
 }
