@@ -26,12 +26,22 @@ export default function OverSeasSection() {
 
   return (
     <div className="overseas-wrapper">
+<<<<<<< HEAD
+      {/*Heading */}
+       <div className="heading-filter-wrapper">
+=======
       {/* Heading */}
       {/* <div className="heading-filter-wrapper">
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
         <h1 className="h1">
           Overseas Packages <br />
           With 20% off
         </h1>
+<<<<<<< HEAD
+      </div>
+
+     
+=======
       </div> */}
 
       {/* Search Input */}
@@ -45,6 +55,7 @@ export default function OverSeasSection() {
         />
       </div>
 
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
       {/* Packages Grid */}
       <div className="card-grid">
         {packagesToShow.map(pkg => (
