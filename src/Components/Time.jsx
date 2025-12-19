@@ -29,6 +29,7 @@ export default function CitiesWithTime() {
   const [data] = useState(citiesData);
 
   return (
+<<<<<<< HEAD
     <section
       style={{
         maxWidth: "700px",
@@ -66,12 +67,51 @@ export default function CitiesWithTime() {
               {item.city}, {item.country}
             </strong>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+=======
+    <section className="page container">
+    <div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    textAlign: "center",
+    gap: "5px",       // spacing between heading & paragraph
+    marginBottom: "20px"
+  }}
+>
+  <h2 style={{ margin: 0, fontSize: "28px", color: "#2849b8" }}>
+    Cities & Available Time Slots
+  </h2>
+  <p style={{ margin: 0, fontSize: "16px", color: "#555" }}>
+    Explore cities with their available time slots:
+  </p>
+</div>
+
+      <div className="list" style={{ marginTop: "20px" }}>
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className="list-item"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              padding: "10px",
+              borderBottom: "1px solid #ddd",
+              marginBottom: "5px",
+            }}
+          >
+            <strong style={{ fontSize: "16px" }}>{item.city}, {item.country}</strong>
+            <div style={{ marginTop: "5px", display: "flex", gap: "10px", flexWrap: "wrap" }}>
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
               {item.slots.map((slot, i) => (
                 <span
                   key={i}
                   style={{
                     backgroundColor: "#3e8ffaff",
+<<<<<<< HEAD
                     color: "#fff",
+=======
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
                     padding: "5px 10px",
                     borderRadius: "5px",
                     fontSize: "14px",
@@ -84,6 +124,7 @@ export default function CitiesWithTime() {
           </div>
         ))}
       </div>
+<<<<<<< HEAD
 
       {/* Responsive */}
       <style>{`
@@ -96,6 +137,8 @@ export default function CitiesWithTime() {
           }
         }
       `}</style>
+=======
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
     </section>
   );
 }

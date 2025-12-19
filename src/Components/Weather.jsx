@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaSun, FaCloud, FaCloudRain, FaSnowflake, FaWind, FaSmog, FaCloudSun, FaTemperatureHigh } from 'react-icons/fa';
 
 const mockCities = [
+<<<<<<< HEAD
   { city: 'Karachi', weather: 'Sunny', temp: '31°C' },
   { city: 'Lahore', weather: 'Cloudy', temp: '28°C' }, 
   { city: 'Islamabad', weather: 'Rainy', temp: '24°C' },
@@ -22,6 +23,28 @@ const mockCities = [
   { city: 'Mirpurkhas', weather: 'Humid', temp: '32°C' },
   { city: 'Larkana', weather: 'Hot', temp: '36°C' },
   { city: 'Gwadar', weather: 'Breezy', temp: '28°C' },
+=======
+ { city: 'Karachi', weather: 'Sunny', temp: '31°C' },
+ { city: 'Lahore', weather: 'Cloudy', temp: '28°C' },
+ { city: 'Islamabad', weather: 'Rainy', temp: '24°C' },
+ { city: 'Rawalpindi', weather: 'Partly Cloudy', temp: '25°C' },
+ { city: 'Faisalabad', weather: 'Sunny', temp: '30°C' },
+ { city: 'Multan', weather: 'Hot', temp: '34°C' },
+ { city: 'Hyderabad', weather: 'Humid', temp: '33°C' },
+ { city: 'Peshawar', weather: 'Windy', temp: '26°C' },
+ { city: 'Quetta', weather: 'Cold', temp: '12°C' },
+ { city: 'Sialkot', weather: 'Cloudy', temp: '27°C' },
+ { city: 'Gujranwala', weather: 'Hazy', temp: '29°C' },
+ { city: 'Sukkur', weather: 'Sunny', temp: '35°C' },
+ { city: 'Bahawalpur', weather: 'Hot', temp: '33°C' },
+ { city: 'Mardan', weather: 'Clear', temp: '23°C' },
+ { city: 'Abbottabad', weather: 'Cold', temp: '14°C' },
+ { city: 'Gilgit', weather: 'Snowy', temp: '5°C' },
+ { city: 'Skardu', weather: 'Freezing', temp: '2°C' },
+ { city: 'Mirpurkhas', weather: 'Humid', temp: '32°C' },
+ { city: 'Larkana', weather: 'Hot', temp: '36°C' },
+ { city: 'Gwadar', weather: 'Breezy', temp: '28°C' },
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
 ];
 
 export default function Weather() {
@@ -44,6 +67,7 @@ export default function Weather() {
   };
 
   return (
+<<<<<<< HEAD
     <section
       style={{
         maxWidth: '700px',
@@ -115,6 +139,42 @@ export default function Weather() {
           }
         }
       `}</style>
+=======
+    <section className="page container">
+     
+     
+    <div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    textAlign: "center",
+    gap: "5px",       // spacing between heading & paragraph
+    marginBottom: "20px",
+  }}
+>
+  <h2 style={{ margin: 0, fontSize: "28px", color: "#2849b8" }}>
+    Weather
+  </h2>
+  <p style={{ margin: 0, fontSize: "16px", color: "#555" }}>
+    Select a city to see current condition:
+  </p>
+</div>
+
+
+      <div className="list">
+        {cities.map((c) => (
+          <div className="list-item" key={c.city} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px', borderBottom: '1px solid #ddd' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <strong>{c.city}</strong>
+              <span className="muted">{weatherIcons[c.weather]}</span>
+              <div className="muted">{c.weather}</div>
+            </div>
+            <div className="price">{c.temp}</div>
+          </div>
+        ))}
+      </div>
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
     </section>
   );
 }

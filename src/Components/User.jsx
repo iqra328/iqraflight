@@ -1,5 +1,9 @@
 import React, { useState } from "react";
 
+<<<<<<< HEAD
+=======
+// 22+ mock users with avatars
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
 const mockUsers = [
   { name: "Aqsa Sadiq", role: "Admin", img: "https://i.pravatar.cc/100?img=5" },
   { name: "Hamza Khan", role: "Editor", img: "https://i.pravatar.cc/100?img=2" },
@@ -29,6 +33,7 @@ export default function User() {
   const [data] = useState(mockUsers);
 
   return (
+<<<<<<< HEAD
     <section
       style={{
         maxWidth: "700px",
@@ -93,6 +98,58 @@ export default function User() {
           }
         }
       `}</style>
+=======
+    <section className="page container">
+    
+    
+
+      <div
+  style={{
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    textAlign: "center",
+    gap: "5px",       // spacing between heading & paragraph
+    marginBottom: "20px"
+  }}
+>
+  <h2 style={{ margin: 0, fontSize: "28px", color: "#2849b8" }}>
+      Users
+    
+  </h2>
+  <p style={{ margin: 0, fontSize: "16px", color: "#555" }}>
+  Registered users list:
+  </p>
+</div>
+
+
+      <div className="list" style={{ marginTop: "10px" }}>
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className="list-item"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "10px",
+              borderBottom: "1px solid #ddd",
+              gap: "10px",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+              <img
+                src={item.img}
+                alt={item.name}
+                style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+              />
+              <strong>{item.name}</strong>
+            </div>
+            <span>{item.role}</span>
+          </div>
+        ))}
+      </div>
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
     </section>
   );
 }
