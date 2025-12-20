@@ -12,6 +12,8 @@ import About from '../Pages/About.jsx'
 import Auth from '../Pages/Profile.jsx'
 import FlightMAnage from '../Pages/FlightManage.jsx'
  import DazyExplore from '../Pages/DazyExplore.jsx'
+ import FlightReservation from "../Pages/flightReservation";
+
 
 function ReactRouter() {
   return (
@@ -29,6 +31,7 @@ function ReactRouter() {
       <Route path="/time" element={<Time />} />
       <Route path="/hotel" element={<HotelRealPage />} />
       <Route path="/explore" element={<DazyExplore />} /> fixed
+        <Route path="/flight-reservation" element={<FlightReservation />} />
     </Routes>
   );
 }

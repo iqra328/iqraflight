@@ -113,3 +113,84 @@
     align-items: flex-start;
   }
 }
+/* ===================================
+   ULTRA SMALL DEVICES (312px–360px)
+=================================== */
+@media (max-width: 360px) {
+
+  /* Root spacing */
+  .tfui-root {
+    padding: 8px;
+  }
+
+  /* Card */
+  .tfui-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  /* Text scaling */
+  .tfui-subtitle {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .tfui-muted {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .tfui-label {
+    font-size: 11px;
+  }
+
+  /* Inputs */
+  .tfui-input,
+  .tfui-select {
+    height: 40px;
+    padding: 8px 10px;
+    font-size: 13px;
+    width: 100%;
+  }
+
+  /* Buttons */
+  .tfui-btn {
+    height: 42px;
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  /* Rows & grids collapse */
+  .tfui-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .tfui-grid-3,
+  .tfui-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  /* Section spacing */
+  .section {
+    margin-bottom: 14px;
+  }
+}
+
+/* ===================================
+   HARD SAFETY (PREVENT BREAK)
+=================================== */
+.tfui-card,
+.tfui-input,
+.tfui-select,
+.tfui-btn {
+  max-width: 100%;
+  min-width: 0;
+}
+
+body {
+  overflow-x: hidden;
+}

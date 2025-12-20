@@ -3,12 +3,14 @@ import Main from '../Components/Main.jsx'
 import ButtonBar from '../Components/ButtomBar.jsx'
 import Footer from '../Components/Footer.jsx'
 import Ticket from '../Components/TicketCom.jsx'
+import MapVector from "../Assets/mapvector.jpg"; // adjust path if needed
 
 function TicketBookFunction() {
   return (
     < >
       <Navbar />
       <Main />
+    
       <ButtonBar />
       <Ticket />
       <Footer />

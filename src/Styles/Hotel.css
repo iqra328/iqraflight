@@ -19,24 +19,25 @@
   align-items: center;
   padding: 15px 20px;
   gap: 15px;
-  flex-wrap: wrap; /* allow wrapping on small screens */
+  flex-wrap: wrap;
 }
 
 .hotel-top h3 {
   color: #2849b8;
   margin: 0;
   font-size: 24px;
+  flex: 1;
+  text-align: left;
 }
 
 .hotel-search {
   width: 100%;
-  max-width: 300px;
-  padding: 10px 15px;
-  font-size: 16px;
+  max-width: 280px;
+  padding: 10px 14px;
+  font-size: 15px;
   border-radius: 8px;
   border: 1px solid #5f09ff;
   outline: none;
-  box-sizing: border-box;
 }
 
 /* =======================
@@ -44,30 +45,27 @@
 ======================= */
 .h2 {
   text-align: center;
-  margin: 20px 0;
+  margin: 20px 10px;
   font-size: 28px;
   color: #222;
 }
 
 /* =======================
-   Main Picture (optional)
+   Main Picture
 ======================= */
 .hotel-main-pic {
   width: 100%;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: auto;
+  max-height: 400px;
   overflow: hidden;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .hotel-main-pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 /* =======================
@@ -77,47 +75,44 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  box-sizing: border-box;
+  gap: 18px;
+  padding: 15px;
 }
 
 .hotel-card {
-  background-color: #fff;
+  background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
 .hotel-card img {
   width: 100%;
-  height: 200px;
+  height: 190px;
   object-fit: cover;
 }
 
 .hotel-card p {
   padding: 10px;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 500;
-  color: #222;
 }
 
-/* Hover effect */
+/* Hover */
 .hotel-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
 
 /* =======================
-   No Hotels Found
+   No Hotels
 ======================= */
 .no-hotel {
   text-align: center;
-  font-size: 20px;
-  color: #999;
-  margin-top: 50px;
+  font-size: 18px;
+  color: #888;
+  margin: 40px 0;
 }
 
 /* =======================
@@ -126,20 +121,18 @@
 @media (max-width: 900px) {
   .hotel-top {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hotel-top h3 {
+    text-align: center;
   }
 }
 
-@media (max-width: 578px) {
-  .hotel-top {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
+@media (max-width: 600px) {
   .hotel-search {
-    width: 90%;
-    max-width: 250px;
+    max-width: 90%;
   }
 
   .h2 {
@@ -147,15 +140,11 @@
   }
 
   .hotel-card img {
-    height: 180px;
+    height: 170px;
   }
 }
 
-@media (max-width: 350px) {
-  .hotel-search {
-    width: 95%;
-  }
-
+@media (max-width: 400px) {
   .h2 {
     font-size: 20px;
   }
@@ -164,3 +153,363 @@
     font-size: 14px;
   }
 }
+/* =======================
+   308px – 578px FIX
+======================= */
+@media (max-width: 578px) and (min-width: 308px) {
+
+  .hotel-top {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .hotel-top h3 {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hotel-search {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .hotel-grid {
+    grid-template-columns: 1fr;   /* 👈 single column fix */
+    padding: 12px;
+  }
+
+  .hotel-card img {
+    height: 160px;
+  }
+
+  .hotel-card p {
+    font-size: 14px;
+  }
+
+  .h2 {
+    font-size: 21px;
+    margin: 15px 5px;
+  }
+}
+/* =======================
+   308px – 578px FIX
+======================= */
+@media (max-width: 578px) and (min-width: 308px) {
+
+  .hotel-top {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .hotel-top h3 {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hotel-search {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .hotel-grid {
+    grid-template-columns: 1fr;   /* 👈 single column fix */
+    padding: 12px;
+  }
+
+  .hotel-card img {
+    height: 160px;
+  }
+
+  .hotel-card p {
+    font-size: 14px;
+  }
+
+  .h2 {
+    font-size: 21px;
+    margin: 15px 5px;
+  }
+}
+/* =======================
+   308px – 578px FIX
+======================= */
+@media (max-width: 578px) and (min-width: 308px) {
+
+  .hotel-top {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .hotel-top h3 {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hotel-search {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .hotel-grid {
+    grid-template-columns: 1fr;   /* 👈 single column fix */
+    padding: 12px;
+  }
+
+  .hotel-card img {
+    height: 160px;
+  }
+
+  .hotel-card p {
+    font-size: 14px;
+  }
+
+  .h2 {
+    font-size: 21px;
+    margin: 15px 5px;
+  }
+}
+/* =======================
+   308px – 578px FIX
+======================= */
+@media (max-width: 578px) and (min-width: 308px) {
+
+  .hotel-top {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .hotel-top h3 {
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hotel-search {
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .hotel-grid {
+    grid-template-columns: 1fr;   /* 👈 single column fix */
+    padding: 12px;
+  }
+
+  .hotel-card img {
+    height: 160px;
+  }
+
+  .hotel-card p {
+    font-size: 14px;
+  }
+
+  .h2 {
+    font-size: 21px;
+    margin: 15px 5px;
+  }
+}
+
+
+/* =======================
+   Ultra Small Devices (≤360px)
+======================= */
+@media (max-width: 360px) {
+  .nav {
+    padding: 10px 12px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+
+  .menu-btn {
+    font-size: 22px;
+  }
+
+  .mobile-menu {
+    width: 230px;
+  }
+
+  .mobile-menu-links li a {
+    font-size: 15px;
+    padding: 9px 10px;
+    gap: 8px;
+  }
+
+  .mobile-menu-links li a svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* =======================
+   Ultra Small (≤284px)
+======================= */
+@media (max-width: 284px) {
+  .nav {
+    padding: 8px 10px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .menu-btn {
+    font-size: 20px;
+  }
+
+  .mobile-menu {
+    width: 200px;
+  }
+
+  .mobile-menu-links {
+    padding: 15px;
+  }
+
+  .mobile-menu-links li a {
+    font-size: 14px;
+    padding: 8px 8px;
+    gap: 6px;
+  }
+
+  .menu-close {
+    top: 12px;
+    right: 12px;
+    font-size: 22px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;   /* Top align content for hotel layout */
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #4b74ff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  color: white;
+  box-sizing: border-box;
+  flex-wrap: wrap;           /* Stack on smaller screens */
+}
+
+/* Left Section */
+.left-section {
+  width: 50%;
+  min-width: 280px;
+}
+
+.left-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.left-section p {
+  width: 100%;               /* Full width for text */
+  line-height: 1.5;
+}
+
+.flight-image {
+  width: 200px;
+  margin-top: 20px;
+}
+
+/* Right Section */
+.right-section {
+  width: 45%;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Form Box */
+.form-box {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 25px;
+  border-radius: 12px;
+  width: 100%;
+  text-align: center;
+}
+
+.form-box h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.qr-area {
+  margin: 15px 0;
+}
+
+.book-btn {
+  width: 100%;
+  font-weight: bold;
+}
+
+/* =======================
+   Responsive Design
+======================= */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 15px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .flight-image {
+    width: 150px;
+    margin: 15px auto;
+  }
+
+  .form-box {
+    width: 90%;
+  }
+}
+
+@media (max-width: 578px) {
+  .left-section h2 {
+    font-size: 18px;
+  }
+
+  .flight-image {
+    width: 120px;
+  }
+
+  .form-box {
+    padding: 18px;
+  }
+
+  .qr-area svg {
+    font-size: 60px !important;
+  }
+}
+
+@med

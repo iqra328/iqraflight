@@ -10,6 +10,11 @@ const ButtonBar = () => {
         <Link to="/ticket" className="item">Ticket Booking</Link>
         <Link to="/hotel" className="item">Hotel Reservation</Link>
         <Link to="/flightstatus" className="item">Flight Status</Link>
+        <Link to="/flight-reservation" className="item">
+  Flight Reservation
+</Link>
+
+       
       </div>
     </div>
   );
