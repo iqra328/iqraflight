@@ -3,14 +3,59 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px 0;
+<<<<<<< HEAD
+  font-family: Arial, sans-serif;
+}
+
+/* Heading + Search Wrapper */
+.heading-filter-wrapper {
+  display: flex;
+  flex-direction: column; /* stack heading & search on small screens */
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* space between heading and search */
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1229f8;
+}
+
+.search-wrapper {
+  width: 100%;
+  max-width: 400px;
+=======
 }
 
 .search-wrapper {
   margin: 20px 0;
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
 }
 
 .search-input {
   width: 100%;
+<<<<<<< HEAD
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  outline: none;
+  background: #f3f5ff;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  border-color: #1c278a;
+  box-shadow: 0 0 8px rgba(28, 39, 138, 0.2);
+}
+
+/* Card grid (already fine) */
+=======
   padding: 10px 14px;
   border-radius: 8px;
   border: 1px solid #ccc;
@@ -121,6 +166,7 @@
   font-size: 14px;
 }
 
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -180,6 +226,25 @@
 }
 
 /* Responsive */
+<<<<<<< HEAD
+@media (max-width: 768px) {
+  .h1 {
+    font-size: 28px;
+  }
+
+  .search-input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .h1 {
+    font-size: 24px;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
+=======
 @media (max-width: 600px) {
   .search-wrapper {
     width: 100%;
@@ -187,5 +252,6 @@
 
   .card-grid {
     grid-template-columns: 1fr;
+>>>>>>> c7ea92548f5d486ebdb215e845318d288b52af66
   }
 }
